@@ -15,7 +15,7 @@ path=
 json=
 ```
   - path是該目錄的 _`abspath`_ 
-  - json會儲存一個 _`dict`_ ，詳細資料是 { _key : value_ } = { _"{width}x{height}" , number_ } ，這是一個圖檔的計數器
+  - json會儲存一個 _`dict`_ ，詳細資料是 { _key : value_ } = { _"{width}x{height}" : number_ } ，這是一個圖檔的計數器
 
 ___
 
