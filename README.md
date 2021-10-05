@@ -25,4 +25,5 @@ _`update.py`_
 
 ___
 _`Tips`_
- - 擴充處理之圖檔於變數 `fileExtension` 擴充副檔名。
+ - `fileExtension` 擴充副檔名。
+ - 刪除圖檔後，建議重新呼叫 `createINI.py`。
