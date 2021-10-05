@@ -1,4 +1,4 @@
-# This program will asking the working directory to 
+# This program will asking the working directory to
 # parse image files in ordering path and create ini
 # file for further usage.
 import configparser as cp
