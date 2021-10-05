@@ -29,12 +29,7 @@ def getJson(path):
 def main():
 	changePath = input('input the working path: ')
 	os.chdir(changePath)
-	for file in os.listdir():
-		if file.endswith('.ini'):
-			print("\nini file exists.")
-			break
-	else:
-		create(os.getcwd())
+	create(os.getcwd())
 
 if __name__ == '__main__':
 	main()

@@ -3,21 +3,19 @@
 import os
 import matplotlib.image as mpimg
 
+fileExtension = ['.jpg', '.png', '.jfif']
 
 def getHW(file):
 	height, width, depth = mpimg.imread( os.path.abspath(file), 0 ).shape
 	return height, width
 
-
 def show_err(err, i=[1]):
 	print(f'Error{i[0]}')
-	print(f'----------\n{e}\n----------')
+	print(f'----------\n{err}\n----------')
 	i[0] += 1
-
 
 target = 0
 success = 0
-
 def summary():
 	global success, target
 
@@ -25,7 +23,6 @@ def summary():
 	print('Success rename : {:>3}'.format(success))
 	print('Fail to rename : {:>3}'.format(target-success))
 
-	
 def Rename(file):
 	global success
 
@@ -47,7 +44,6 @@ def Rename(file):
 	except Exception as e:
 		show_err(e)
 
-
 def main():
 	global success, target
 
@@ -55,12 +51,11 @@ def main():
 	os.chdir(changePath)
 
 	for file in os.listdir():
-		if file.endswith('png') or file.endswith('jpg'):
+		if os.path.splitext(file)[-1] in fileExtension:
 			target += 1
 			try: Rename(file)
 			except: pass
 	summary()
-
 
 if __name__ == '__main__':
 	main()
